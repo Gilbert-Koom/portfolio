@@ -43,8 +43,29 @@ body{
   text-align: center;
   width: 91%;
 }
-div{
-  p{
-    text-align: center;
-  }
+
+//this is for centering the texts
+.name,.description,.project_cta,.html,.css,.javascript,.react,.sass,.accessibility{
+  text-align: center;
+
 }
+
+
+//remember to use the css shorthand property
+.project_cta{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4%;
+  padding-right: 4%;
+  
+  
+}
+.links_1,.links_2,.links_3,.links_4,.links_5,.links_6{
+  display: flex;
+  text-transform: uppercase;
+  padding-left: 4%;
+  
+}
+
+//I used text transform to turn the lowercase into uppercase for accessibility
+

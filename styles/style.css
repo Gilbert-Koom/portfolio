@@ -43,6 +43,19 @@ body {
   width: 91%;
 }
 
-div p {
+.name, .description, .project_cta, .html, .css, .javascript, .react, .sass, .accessibility {
   text-align: center;
+}
+
+.project_cta {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.links_1, .links_2, .links_3, .links_4, .links_5, .links_6 {
+  display: flex;
+  text-transform: uppercase;
+  padding-left: 4%;
 }/*# sourceMappingURL=style.css.map */
