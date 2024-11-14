@@ -10,57 +10,63 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <p class="name">adamkeyes</p>
-    <div class="profiles">
-        <img src="assets/images/icon-github.svg" alt="">
-        <img src="assets/images/icon-frontend-mentor.svg" alt="">
-        <img src="assets/images/icon-linkedin.svg" alt="">
-        <img src="assets/images/icon-twitter.svg" alt="">
-        
+    
+    <div class="name_and_profiles">
+        <p class="name">adamkeyes</p>
+        <div class="profiles">
+            <img src="assets/images/icon-github.svg" alt="">
+            <img src="assets/images/icon-frontend-mentor.svg" alt="">
+            <img src="assets/images/icon-linkedin.svg" alt="">
+            <img src="assets/images/icon-twitter.svg" alt="">
+            
+        </div>
     </div>
     
+    <div class="picture_and_description">
+        <picture class="profile_image">
+            <source media="(min-width:1000px)" srcset="assets/images/image-profile-desktop.webp">
+            <source media="(min-width:400px)" srcset="assets/images/image-profile-tablet.webp">
+            <img src="assets/images/image-profile-mobile.webp" alt="">
+        </picture>
+        <div class="description">
+            <p>Nice to meet you! I'm Adam Keyes.</p>
+            <p>Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
+            <button>Contact me</button>
     
-    <picture class="profile_image">
-        <source media="(min-width:1000px)" srcset="assets/images/image-profile-desktop.webp">
-        <source media="(min-width:650px)" srcset="assets/images/image-profile-tablet.webp">
-        <img src="assets/images/image-profile-mobile.webp" alt="">
-    </picture>
-    <div class="description">
-        <p>Nice to meet you! I'm Adam Keyes.</p>
-        <p>Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
-        <button>Contact me</button>
-
+        </div>
     </div>
     <hr>
     <! --use css to capitalize the technologies -->
-    <div class="html">
+    <div class="technology">
+        <div class="html">
         
-        <p>html</p>
-        <p>4 Years Experience</p>
-    </div>
-    <div class="css">
-        
-        <p>css</p>
-        <p>4 Years Experience</p>
-    </div>
-    <div class="javascript">
-        
-        <p>Javascript</p>
-        <p>4 Years Experience</p>
-    </div>
-    <div class="accessibility">
-        
-        <p>Accessibility</p>
-        <p>4 Years Experience</p>
-    </div>
-    <div class="react">
-        <p>React</p>
-        <p>3 Years of Experience</p>
-    </div>
-
-    <div class="sass">
-        <p>Sass</p>
-        <p>3 Years of Experience</p>
+            <p>html</p>
+            <p>4 Years Experience</p>
+        </div>
+        <div class="css">
+            
+            <p>css</p>
+            <p>4 Years Experience</p>
+        </div>
+        <div class="javascript">
+            
+            <p>Javascript</p>
+            <p>4 Years Experience</p>
+        </div>
+        <div class="accessibility">
+            
+            <p>Accessibility</p>
+            <p>4 Years Experience</p>
+        </div>
+        <div class="react">
+            <p>React</p>
+            <p>3 Years of Experience</p>
+        </div>
+    
+        <div class="sass">
+            <p>Sass</p>
+            <p>3 Years of Experience</p>
+        </div>
     </div>
     <div class="project_cta">
         <p>projects</p>
@@ -75,8 +81,10 @@
                 
                 
             </picture>
-            <p>design portfolio</p>
-            <p>html css</p>
+            <div class="project1_name">
+                <p>design portfolio</p>
+                <p>html css</p>
+            </div>
             <div class="links_1">
                 <a href="#">view project</a>
                 <a href="#">view code</a>
@@ -90,8 +98,10 @@
                 
                 
             </picture>
-            <p>design portfolio</p>
-            <p>html css</p>
+            <div class="project1_name">
+                <p>e-learning landing page</p>
+                <p>html css</p>
+            </div>
             <div class="links_2">
                 <a href="#">view project</a>
                 <a href="#">view code</a>
@@ -105,8 +115,10 @@
                 
                 
             </picture>
-            <p>design portfolio</p>
-            <p>html css</p>
+            <div class="project1_name">
+                <p>todo web app</p>
+                <p>html css</p>
+            </div>
             <div class="links_3">
 							<a href="#">view project</a>
 							<a href="#">view code</a>
@@ -120,8 +132,10 @@
                 
                 
             </picture>
-            <p>design portfolio</p>
-            <p>html css</p>
+            <div class="project1_name">
+                <p>entertainment web app</p>
+                <p>html css javascript</p>
+            </div>
             <div class="links_4">
 							<a href="#">view project</a>
 							<a href="#">view code</a>
@@ -135,8 +149,10 @@
                 
                 
             </picture>
-            <p>design portfolio</p>
-            <p>html css</p>
+            <div class="project1_name">
+                <p>memory game</p>
+                <p>html css javascript</p>
+            </div>
             <div class="links_5">
 							<a href="#">view project</a>
 							<a href="#">view code</a>
@@ -150,30 +166,50 @@
                 
                 
             </picture>
-            <p>design portfolio</p>
-            <p>html css</p>
+            <div class="project1_name">
+                <p>art gallery showcase</p>
+                <p>html css javascript</p>
+            </div>
             <div class="links_6">
 							<a href="#">view project</a>
 							<a href="#">view code</a>
 					</div>
         </div>
     </div>
-    <p>Contact</p>
-    <p>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
-    <form action="">
-        <label for="name">
-            NAME
-            <input type="text">
-        </label>
-        <label for="email">
-            email
-            <input type="email">
-        </label>
-        <label for="message">
-            message
-            <input type="text">
-        </label>
-    </form>
+    <div class="form_enquiry">
+        <div class="enquiry">
+            <p class="center">Contact</p>
+            <p class="center">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
+        
+        </div>
+        <form action="">
+            <label for="name">
+                NAME
+                <input type="text">
+            </label>
+            <label for="email">
+                email
+                <input type="email">
+            </label>
+            <label for="message">
+                message
+                <input type="text">
+            </label>
+            <button>send message</button>
+        </form>
+    
+    
+    </div>
+    <p class="center">adamkeyes</p>
+    <div class="profiles">
+        <img src="assets/images/icon-github.svg" alt="">
+        <img src="assets/images/icon-frontend-mentor.svg" alt="">
+        <img src="assets/images/icon-linkedin.svg" alt="">
+        <img src="assets/images/icon-twitter.svg" alt="">
+        
+    </div>
+
+
     
 </body>
 </html>

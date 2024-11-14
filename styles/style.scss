@@ -5,7 +5,12 @@
   color: white;
   font-family: "Space Grotesk";
 }
-
+input{
+  display: block;
+  width: 96%;
+  margin: auto;
+  color: yellow;
+}
 picture>img{
   width: 92%;
   display: block;
@@ -13,36 +18,44 @@ picture>img{
   margin-right: auto;
   
 }
-.profile_image{
-  img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 47%;
-
+.picture_and_description{
+  .profile_image{
+    img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 47%;
+  
+    }
   }
+  .description{
+    text-align: center;
+    width: 91%;
+  }
+
 }
+
 body{
   background-color: rgb(21, 21, 21);
 }
-.name{
-  text-align: center;
-}
-.profiles{
-  
-  width: 153px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  img{
-    width: 15px;
+
+.name_and_profiles{
+  .name{
+    text-align: center;
   }
+  .profiles{
+    
+    width: 153px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    img{
+      width: 15px;
+    }
+  } 
+
 }
 
-.description{
-  text-align: center;
-  width: 91%;
-}
 
 //this is for centering the texts
 .name,.description,.project_cta,.html,.css,.javascript,.react,.sass,.accessibility{
@@ -66,6 +79,59 @@ body{
   padding-left: 4%;
   
 }
+.project1_name{
+  padding-left: 4%;
+  text-transform: uppercase;
+}
 
-//I used text transform to turn the lowercase into uppercase for accessibility
+.center{
+  text-align: center;
+}
 
+//for tablet users
+
+@media (min-width:376px){
+  .name_and_profiles{
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .picture_and_description{
+    display: grid;
+    grid-template-columns: 53% auto;
+    .description{
+      grid-column-start: 1;
+      grid-column-end: 2;
+      
+    }
+    .profile_image{
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+    }
+  }
+  .technology{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .all_projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .form_enquiry{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (min-width:1000px){
+  .technology{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+  
+
+}

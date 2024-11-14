@@ -6,6 +6,13 @@
   font-family: "Space Grotesk";
 }
 
+input {
+  display: block;
+  width: 96%;
+  margin: auto;
+  color: yellow;
+}
+
 picture > img {
   width: 92%;
   display: block;
@@ -13,34 +20,32 @@ picture > img {
   margin-right: auto;
 }
 
-.profile_image img {
+.picture_and_description .profile_image img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 47%;
+}
+.picture_and_description .description {
+  text-align: center;
+  width: 91%;
 }
 
 body {
   background-color: rgb(21, 21, 21);
 }
 
-.name {
+.name_and_profiles .name {
   text-align: center;
 }
-
-.profiles {
+.name_and_profiles .profiles {
   width: 153px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-.profiles img {
+.name_and_profiles .profiles img {
   width: 15px;
-}
-
-.description {
-  text-align: center;
-  width: 91%;
 }
 
 .name, .description, .project_cta, .html, .css, .javascript, .react, .sass, .accessibility {
@@ -58,4 +63,52 @@ body {
   display: flex;
   text-transform: uppercase;
   padding-left: 4%;
+}
+
+.project1_name {
+  padding-left: 4%;
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+@media (min-width: 376px) {
+  .name_and_profiles {
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .picture_and_description {
+    display: grid;
+    grid-template-columns: 53% auto;
+  }
+  .picture_and_description .description {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .picture_and_description .profile_image {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+  }
+  .technology {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .all_projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .form_enquiry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  .technology {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
