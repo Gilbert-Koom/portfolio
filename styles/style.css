@@ -2,15 +2,63 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
   font-family: "Space Grotesk";
 }
 
-input {
+input, textarea {
+  color: white;
   display: block;
   width: 96%;
   margin: auto;
-  color: yellow;
+  border: none;
+  border-bottom: 2px solid green;
+  background-color: rgb(36, 36, 36);
+}
+
+#inputName {
+  background-color: rgb(36, 36, 36);
+}
+
+body {
+  background-color: rgb(21, 21, 21);
+  color: white;
+}
+
+input, textarea:active {
+  outline: 0px;
+  display: block;
+  width: 96%;
+  margin: auto;
+  border: none;
+  border-bottom: 2px solid green;
+  background-color: rgb(36, 36, 36);
+}
+
+input, textarea:focus {
+  display: block;
+  width: 96%;
+  margin: auto;
+  border-style: none;
+  border-bottom: 2px solid green;
+}
+
+textarea:focus {
+  outline: 0;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+label, button {
+  margin-left: 2%;
+}
+
+button {
+  color: white;
+  border: none;
+  border-bottom: 2px solid green;
+  background-color: rgb(36, 36, 36);
 }
 
 picture > img {
@@ -28,24 +76,19 @@ picture > img {
 }
 .picture_and_description .description {
   text-align: center;
-  width: 91%;
+  width: 92%;
+  margin: auto;
+  color: gray;
 }
 
-body {
-  background-color: rgb(21, 21, 21);
+.name_and_profiles {
+  margin: auto;
 }
-
 .name_and_profiles .name {
   text-align: center;
 }
 .name_and_profiles .profiles {
-  width: 153px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-.name_and_profiles .profiles img {
-  width: 15px;
+  margin-left: 25%;
 }
 
 .name, .description, .project_cta, .html, .css, .javascript, .react, .sass, .accessibility {
@@ -65,6 +108,14 @@ body {
   padding-left: 4%;
 }
 
+span {
+  text-decoration: underline green;
+}
+
+a {
+  color: white;
+}
+
 .project1_name {
   padding-left: 4%;
   text-transform: uppercase;
@@ -74,11 +125,39 @@ body {
   text-align: center;
 }
 
+#name_and_profiles2 {
+  background-color: rgb(36, 36, 36);
+}
+
+.form_enquiry {
+  background-color: rgb(36, 36, 36);
+}
+.form_enquiry .enquiry {
+  width: 92%;
+  margin: auto;
+}
+.form_enquiry p:nth-child(2) {
+  color: gray;
+}
+
+.technology div p:nth-child(1) {
+  color: white;
+}
+.technology div p:nth-child(2) {
+  color: gray;
+}
+
+.all_projects div div p:nth-child(2) {
+  color: gray;
+}
+
 @media (min-width: 376px) {
   .name_and_profiles {
-    width: 96%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
   }
   .picture_and_description {
     display: grid;
