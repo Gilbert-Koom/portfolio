@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: "Space Grotesk";
+  font-size: 16px;
 }
 
 input, textarea {
@@ -11,7 +12,7 @@ input, textarea {
   width: 96%;
   margin: auto;
   border: none;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid gray;
   background-color: rgb(36, 36, 36);
 }
 
@@ -30,7 +31,7 @@ input, textarea:active {
   width: 96%;
   margin: auto;
   border: none;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid gray;
   background-color: rgb(36, 36, 36);
 }
 
@@ -39,7 +40,7 @@ input, textarea:focus {
   width: 96%;
   margin: auto;
   border-style: none;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid gray;
 }
 
 textarea:focus {
@@ -57,8 +58,20 @@ label, button {
 button {
   color: white;
   border: none;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid rgb(78, 225, 160);
   background-color: rgb(36, 36, 36);
+  text-transform: uppercase;
+}
+
+button:hover {
+  color: rgb(78, 225, 160);
+}
+
+.last_button_container {
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  justify-content: end;
 }
 
 picture > img {
@@ -78,17 +91,38 @@ picture > img {
   text-align: center;
   width: 92%;
   margin: auto;
+}
+.picture_and_description .description p:nth-child(1) {
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.15px;
+}
+.picture_and_description .description p:nth-child(2) {
   color: gray;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+.picture_and_description .description button {
+  font-weight: bold;
+  line-height: 26px;
+  letter-spacing: 2.29px;
 }
 
-.name_and_profiles {
-  margin: auto;
-}
 .name_and_profiles .name {
   text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: -0.33px;
 }
 .name_and_profiles .profiles {
-  margin-left: 25%;
+  width: 50%;
+  max-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
 }
 
 .name, .description, .project_cta, .html, .css, .javascript, .react, .sass, .accessibility {
@@ -98,8 +132,17 @@ picture > img {
 .project_cta {
   display: flex;
   justify-content: space-between;
-  padding-left: 4%;
-  padding-right: 4%;
+}
+.project_cta p {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.15px;
+}
+.project_cta button {
+  font-weight: bold;
+  line-height: 26px;
+  letter-spacing: 2.29px;
 }
 
 .links_1, .links_2, .links_3, .links_4, .links_5, .links_6 {
@@ -109,11 +152,20 @@ picture > img {
 }
 
 span {
-  text-decoration: underline green;
+  text-decoration: underline rgb(78, 225, 160);
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.15px;
 }
 
 a {
   color: white;
+  text-decoration-color: rgb(78, 225, 160);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2.29px;
 }
 
 .project1_name {
@@ -136,36 +188,82 @@ a {
   width: 92%;
   margin: auto;
 }
+.form_enquiry .enquiry p:nth-child(1) {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.14px;
+}
+.form_enquiry .enquiry p:nth-child(2) {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0px;
+}
 .form_enquiry p:nth-child(2) {
   color: gray;
 }
 
 .technology div p:nth-child(1) {
   color: white;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
 }
 .technology div p:nth-child(2) {
   color: gray;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0px;
 }
 
+.all_projects div div p:nth-child(1) {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+}
 .all_projects div div p:nth-child(2) {
   color: gray;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0px;
 }
 
-@media (min-width: 376px) {
+::placeholder {
+  line-height: 26px;
+  letter-spacing: -0.22px;
+}
+
+.last_button {
+  font-weight: bold;
+  line-height: 26px;
+  letter-spacing: 2.29px;
+}
+
+@media (min-width: 760px) {
   .name_and_profiles {
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;
+  }
+  .name_and_profiles .profiles {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
   }
   .picture_and_description {
     display: grid;
-    grid-template-columns: 53% auto;
+    grid-template-columns: 70% 30%;
   }
   .picture_and_description .description {
     grid-column-start: 1;
     grid-column-end: 2;
+  }
+  .picture_and_description .description p {
+    text-align: justify;
+  }
+  .picture_and_description .description .first_button_container {
+    display: flex;
   }
   .picture_and_description .profile_image {
     grid-column-start: 2;
@@ -175,6 +273,11 @@ a {
   .technology {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .technology div p {
+    text-align: justify;
   }
   .all_projects {
     display: grid;
@@ -184,10 +287,20 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .form_enquiry div p {
+    text-align: justify;
+  }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1440px) {
   .technology {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .all_projects div div:last-child {
+    display: none;
+    flex-direction: column;
+  }
+  .all_projects:hover div div:last-child {
+    visibility: visible;
   }
 }/*# sourceMappingURL=style.css.map */

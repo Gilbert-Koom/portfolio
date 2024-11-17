@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/font.css">
 </head>
 <body>
     
@@ -29,9 +30,11 @@
             <img src="assets/images/image-profile-mobile.webp" alt="">
         </picture>
         <div class="description">
-            <p>Nice to meet you! I'm <span>Adam Keyes</span>.</p>
-            <p>Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
-            <button onclick="scrollFormIntoView()">Contact me</button>
+            <p class="description_headimg">Nice to meet you! I'm <span>Adam Keyes</span>.</p>
+            <p class="description_body">Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
+            <div class="first_button_container">
+                <button onclick="scrollFormIntoView()">Contact me</button>
+            </div>
     
         </div>
     </div>
@@ -69,11 +72,11 @@
         </div>
     </div>
     <div class="project_cta">
-        <p>projects</p>
-        <button>Contact me</button>
+        <p>Projects</p>
+        <button onclick="scrollFormIntoView()">Contact me</button>
     </div>
     <div class="all_projects">
-        <div>
+        <div class="first">
             <picture>
 
                 <source media="(min-width:650px)" srcset="assets/images/thumbnail-project-1-large.webp">
@@ -86,8 +89,8 @@
                 <p>html css</p>
             </div>
             <div class="links_1">
-                <a href="#">view project</a>
-                <a href="#">view code</a>
+                <a href="#1">view project</a>
+                <a href="#1">view code</a>
             </div>
         </div>
         <div>
@@ -103,8 +106,8 @@
                 <p>html css</p>
             </div>
             <div class="links_2">
-                <a href="#">view project</a>
-                <a href="#">view code</a>
+                <a href="#2">view project</a>
+                <a href="#2">view code</a>
             </div>
         </div>
         <div>
@@ -120,8 +123,8 @@
                 <p>html css</p>
             </div>
             <div class="links_3">
-							<a href="#">view project</a>
-							<a href="#">view code</a>
+							<a href="#3">view project</a>
+							<a href="#3">view code</a>
 					</div>
         </div>
         <div>
@@ -133,12 +136,13 @@
                 
             </picture>
             <div class="project1_name">
-                <p>entertainment web app</p>
-                <p>html css javascript</p>
+							<p>entertainment web app</p>
+							<p>html css javascript</p>
             </div>
             <div class="links_4">
-							<a href="#">view project</a>
-							<a href="#">view code</a>
+
+							<a href="#4">view project</a>
+							<a href="#4">view code</a>
 					</div>
         </div>
         <div>
@@ -154,8 +158,8 @@
                 <p>html css javascript</p>
             </div>
             <div class="links_5">
-							<a href="#">view project</a>
-							<a href="#">view code</a>
+							<a href="#5">view project</a>
+							<a href="#5">view code</a>
 					</div>
         </div>
         <div>
@@ -171,8 +175,8 @@
                 <p>html css javascript</p>
             </div>
             <div class="links_6">
-							<a href="#">view project</a>
-							<a href="#">view code</a>
+							<a href="#6">view project</a>
+							<a href="#6">view code</a>
 					</div>
         </div>
     </div>
@@ -189,17 +193,20 @@
             </label>
             <label for="email">
                 
-                <input type="email" placeholder="email">
+                <input type="email" placeholder="EMAIL">
             </label>
             <label for="message">
                 
                 <textarea name="" id="" placeholder="MESSAGE"></textarea>
             </label>
-            <button>send message</button>
+            <div class="last_button_container">
+                <button class="last_button">send message</button>
+            </div>
         </form>
     
     
     </div>
+    <hr>
     <div class="name_and_profiles" id="name_and_profiles2">
         <p class="name">adamkeyes</p>
         <div class="profiles">
