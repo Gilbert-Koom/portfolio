@@ -20,6 +20,10 @@ input, textarea {
   background-color: rgb(36, 36, 36);
 }
 
+button:hover {
+  color: rgb(78, 225, 160);
+}
+
 body {
   background-color: rgb(21, 21, 21);
   color: white;
@@ -59,12 +63,8 @@ button {
   color: white;
   border: none;
   border-bottom: 2px solid rgb(78, 225, 160);
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(21, 21, 21);
   text-transform: uppercase;
-}
-
-button:hover {
-  color: rgb(78, 225, 160);
 }
 
 .last_button_container {
@@ -132,6 +132,8 @@ picture > img {
 .project_cta {
   display: flex;
   justify-content: space-between;
+  width: 94%;
+  margin: auto;
 }
 .project_cta p {
   font-weight: bold;
@@ -246,6 +248,12 @@ a {
     display: flex;
     justify-content: space-between;
   }
+  .name_and_profiles .name {
+    font-size: 32;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -0.44px;
+  }
   .name_and_profiles .profiles {
     display: flex;
     justify-content: space-between;
@@ -265,10 +273,25 @@ a {
   .picture_and_description .description .first_button_container {
     display: flex;
   }
+  .picture_and_description .description p:nth-child(1) {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2.05px;
+  }
+  .picture_and_description .description button {
+    font-weight: bold;
+    line-height: 26px;
+    letter-spacing: 2.29px;
+  }
   .picture_and_description .profile_image {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
+  }
+  .picture_and_description .profile_image img {
+    margin: 0;
+    width: 100%;
   }
   .technology {
     display: grid;
@@ -291,16 +314,57 @@ a {
     text-align: justify;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
+  .all_projects {
+    padding-right: 6%;
+    padding-left: 6%;
+    row-gap: 30px;
+  }
+  .all_projects div div:nth-child(3) {
+    display: none;
+  }
+  .all_projects div:hover div:nth-child(3) {
+    display: initial;
+  }
+  .form_enquiry {
+    padding-left: 6%;
+    padding-right: 6%;
+    margin-top: 30px;
+  }
   .technology {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
   }
-  .all_projects div div:last-child {
-    display: none;
-    flex-direction: column;
+  .project_cta {
+    width: 77%;
+    margin: auto;
   }
-  .all_projects:hover div div:last-child {
-    visibility: visible;
+  .name_and_profiles {
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .picture_and_description {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .picture_and_description .description p:nth-child(1) {
+    font-weight: bold;
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -2.5px;
+  }
+  .picture_and_description .description p:nth-child(1) span {
+    font-weight: bold;
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -2.5px;
+  }
+  .picture_and_description .description button {
+    font-weight: bold;
+    line-height: 26px;
+    letter-spacing: 2.29px;
   }
 }/*# sourceMappingURL=style.css.map */

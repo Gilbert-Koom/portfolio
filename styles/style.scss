@@ -20,10 +20,15 @@ input,textarea{
 #inputName{
   background-color: rgb(36, 36, 36);
 }
+button:hover{
+  color: rgb(78, 225, 160);
+  
+}
 
 body{
   background-color: rgb(21, 21, 21);
   color: white;
+  
 }
 input,textarea:active{
   outline: 0px;
@@ -59,13 +64,10 @@ button{
   color: white;
   border: none;
   border-bottom: 2px solid rgb(78, 225, 160);
-  background-color: rgb(36,36,36);
+  background-color: rgb(21, 21, 21);
   text-transform: uppercase;
 }
 
-button:hover{
-  color: rgb(78, 225, 160);
-}
 
 .last_button_container{
   padding-left: 2%;
@@ -153,6 +155,8 @@ picture>img{
 .project_cta{
   display: flex;
   justify-content: space-between;
+  width: 94%;
+  margin: auto;
   p{
     font-weight: bold;
     font-size: 40px;
@@ -277,6 +281,13 @@ a{
   .name_and_profiles{
     display: flex;
     justify-content: space-between;
+    .name{
+      font-size: 32;
+      font-weight: bold;
+      line-height: 32px;
+      letter-spacing: -0.44px;
+
+    }
     
     .profiles{
       display: flex;
@@ -295,15 +306,27 @@ a{
       }
       .first_button_container{
         display: flex;
-        
-        
       }
-      
+      p:nth-child(1){
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -2.05px;
+      }
+      button{
+        font-weight: bold;
+        line-height: 26px;
+        letter-spacing: 2.29px;
+      } 
     }
     .profile_image{
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 1;
+      img{
+        margin: 0;
+        width: 100%;
+      }
     }
   }
   .technology{
@@ -333,42 +356,78 @@ a{
 }
 
 //for desktop
-@media (min-width:1440px){
-  .technology{
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-  }
-
+@media (min-width:1200px){
   .all_projects{
+    padding-right: 6%;
+    padding-left: 6%;
+    row-gap: 30px;
     div{
-      picture{
-        img{
-          
-        }
-      }
-      div:last-child{
+      div:nth-child(3){
         display: none;
-        flex-direction: column;
-        
       }
     }
+    div:hover{
+      div:nth-child(3){
+        display: initial;
+      }
 
-  }
-  .all_projects:hover{
+    }
     
-    div{
-      picture{
-        img{
-          
-        }
-      }
-      div:last-child{
-        visibility: visible;
-
-        
-      }
-    }
   }
 
-}
+  .form_enquiry{
+    padding-left: 6%;
+    padding-right: 6%;
+    margin-top: 30px;
+  }
+
+  .technology{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+		padding-left: 5%;
+    padding-right: 5%;
+  }
+	.project_cta{
+		width: 77%;
+		margin: auto;
+	}
+  .name_and_profiles{
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+
+  .picture_and_description{
+
+    .profile_image{
+
+    }
+
+    padding-left: 5%;
+    padding-right: 5%;
+    .description{
+      p:nth-child(1){
+        font-weight: bold;
+        font-size: 88px;
+        line-height: 88px;
+        letter-spacing: -2.5px;
+				span{
+					font-weight: bold;
+					font-size: 88px;
+					line-height: 88px;
+					letter-spacing: -2.5px;
+				}
+      }
+      
+      button{
+        font-weight: bold;
+        line-height: 26px;
+        letter-spacing: 2.29px;
+      }
+    }
+
+  }
+
+  }
+
