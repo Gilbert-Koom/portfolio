@@ -7,6 +7,14 @@
   
   
 }
+.box-content{
+  display: none;
+}
+
+hr{
+  width: 90%;
+  margin: auto;
+}
 input,textarea{
   color: white;
   display: block;
@@ -293,11 +301,12 @@ a{
       display: flex;
       justify-content: space-between;
       margin: 0;
+      z-index: 5;
     }
   }
   .picture_and_description{
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
     .description{
       grid-column-start: 1;
       grid-column-end: 2;
@@ -320,6 +329,7 @@ a{
       } 
     }
     .profile_image{
+      top: 0;
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 1;
@@ -355,23 +365,45 @@ a{
 
 }
 
-//for desktop
 @media (min-width:1200px){
+
+  .links_1,.links_2,.links_3,.links_4,.links_5,.links_6{
+    display: none;
+    
+    
+  }
+
+  .box{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+}
+.box:hover .box-content{
+  opacity: 0.9;
+}
+.box-content {
+  background: #242424;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  left: 0;
+  bottom: 0%;
+  height: 100%;
+  width: 100%;
+  padding: 36px;
+  color: var(--white);
+  z-index: 5;
+  transition: all 0.3s ease-in-out 0.1s;
+}
   .all_projects{
     padding-right: 6%;
     padding-left: 6%;
     row-gap: 30px;
-    div{
-      div:nth-child(3){
-        display: none;
-      }
-    }
-    div:hover{
-      div:nth-child(3){
-        display: initial;
-      }
-
-    }
     
   }
 
@@ -384,8 +416,8 @@ a{
   .technology{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-		padding-left: 5%;
-    padding-right: 5%;
+		padding-left: 7.5%;
+    padding-right: 7.5%;
   }
 	.project_cta{
 		width: 77%;
@@ -393,7 +425,7 @@ a{
 	}
   .name_and_profiles{
     width: 100%;
-    padding-left: 6%;
+    padding-left: 10%;
     padding-right: 6%;
   }
 
@@ -404,8 +436,8 @@ a{
 
     }
 
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 7.3%;
+    padding-right: 7.3%;
     .description{
       p:nth-child(1){
         font-weight: bold;
